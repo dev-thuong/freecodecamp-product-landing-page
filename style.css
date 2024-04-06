@@ -1,10 +1,20 @@
-img {
-    width: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, .8);
+    background-image: url('assets/main-background.jpg');
+    background-blend-mode: saturation;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
 }
 
 body > header {
@@ -77,7 +87,7 @@ body > header {
     position: absolute;
     bottom: -100%;
     left: 0;
-    width: 180px;
+    width: 250px;
     background-color: #fff;
     display: none;
     box-shadow: 1px 1px 10px #000;
@@ -120,16 +130,301 @@ h1, h2 {
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
+    margin: 0 0 15px 0;
 }
 
 .row {
-    width: 100%;
-    max-width: 1170px;
+    width: min(1170px, calc(100% - 6rem));
     margin: 0 auto;
+    padding: 0 15px 30px;
 }
 
 #introduce p {
     color: #f1f1f1;
     line-height: 1.6;
+    font-size: 18px;
+}
+
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.wrapper > div {
+    position: absolute;
+    height: 100%;
+    width: 35px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #f1f1f1;
+    cursor: pointer;
+    background-color: #00000080;
+    opacity: 0;
+}
+
+.wrapper > div:first-child {
+    left: 0;
+}
+
+.wrapper > div:last-child {
+    right: 0;
+}
+
+.wrapper:hover > div {
+    opacity: 1;
+}
+
+.wrapper > div:hover svg {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 10px);
+    gap: 15px;
+    padding: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.carousel .card {
+    list-style: none;
+    cursor: pointer;
+    scroll-snap-align: start;
+}
+
+.carousel .card img {
+    object-fit: cover;
+    width: 380px;
+    display: block;
+}
+
+#list-of-delicious-dishes > p,
+#restaurant-space > p,
+#sign-up-to-receive-notifications p {
+    color: #f1f1f1;
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto 21px;
+}
+
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.dish {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding: 0 10px 20px;
+    box-sizing: border-box;
+}
+
+.dish-img {
+    width: 26%;
+}
+
+.dish-img img {
+    max-height: 109px;
+    object-fit: cover;
+}
+
+.dish-info {
+    width: 74%;
+    padding: 10px 22px 20px;
+}
+
+.dish-info div {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #565656;
+    width: 100%;
+}
+
+.dish-info a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.dish-info .price {
+    color: #FFD34E;
+    font-weight: 700;
+}
+
+.see-all {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 10px;
+    color: #cbcbcb;
+    line-height: 1.6;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+    border: 1px dashed #565656;
+}
+
+.see-all:hover {
+    background-color: #ffd34e;
+    color: #211300;
+}
+
+.posts {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.posts > li {
+    padding: 0 10px 20px;
+}
+
+.posts .post-img {
+    aspect-ratio: 4 / 3;
+}
+
+.posts .post-img img {
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.posts .post-1 {
+    max-width: 25%;
+}
+
+.posts h3 {
+    color: #ffd34e;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 10px 0 2px;
+    font-weight: 700;
+}
+
+.posts .date {
+    opacity: .8;
+    color: #f1f1f1;
+    font-size: .8em;
+    margin: 0;
+}
+
+.posts .is-divider {
+    width: 30px;
+    height: 2px;
+    background: rgba(255, 255, 255, .3);
+    margin: .5em auto .5em 0;
+}
+
+.posts .description {
+    color: #f1f1f1;
+    font-size: 1em;
+    text-align: justify;
+    margin: .5em 0;
+
+    /* Limit text to 4 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-height: 1.6em;
+}
+
+.posts .post-1 .description {
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    max-height: 6.4em;
+}
+
+.posts .post-2 .description {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    max-height: 3.2em;
+}
+
+.posts .post-2 {
+    position: relative;
+}
+
+.posts .post-wrapper {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 22px 20px;
+    text-shadow: 1px 1px #000, 1px 2px #211300;
+}
+
+#sign-up-to-receive-notifications {
+    background-image: url('assets/main-background.jpg');
+    background-color: rgba(0, 0, 0, .8);
+    background-blend-mode: saturation;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: inset 0px 7px 2px -3px #211300;;}
+
+#sign-up-to-receive-notifications form {
+    padding: 65px 0;
+    border-top: 1px dashed #565656;
+    border-bottom: 1px dashed #565656;
+    text-align: center;
+}
+
+#sign-up-to-receive-notifications p {
+    padding-bottom: 35px;
+    margin: 0;
+}
+
+form input {
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 1px solid #3d3d3d;
     font-size: 16px;
+    line-height: 23px;
+    width: 40%;
+    display: inline-block;
+}
+
+form button {
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 1px solid #3d3d3d;
+    color: #fff;
+    width: 86px;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+footer {
+    background-color: #211300;
+}
+
+@media screen and (max-width: 768px) {
+.wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 5px);
+}
 }

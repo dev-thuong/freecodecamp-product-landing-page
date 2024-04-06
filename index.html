@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toan Thang Restaurant</title>
+    <title>Vien Dong Restaurant</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2e9a74970d.js" crossorigin="anonymous"></script>
     <!-- https://nhahang2.webmatrix.vn/ -->
@@ -14,16 +14,16 @@
     <header>
         <div class="mobile-menu"></div>
         <div class="header-logo">
-            <img src="assets/logo.png" alt="Toan Thang Restaurant Logo">
+            <img src="assets/logo.png" alt="Vien Dong Restaurant Logo">
         </div>
         <nav class="header-nav">
             <ul>
                 <li><a class="active" href="#">Home</a></li>
                 <li><a href="#introduce">Introduce</a></li>
                 <li>
-                    <a href="">Good food <i class="fa-solid fa-angle-down"></i></a>
+                    <a href="#">Delicious dishes <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="sub-menu">
-                        <li><a href="">Special delicious food</a></li>
+                        <li><a href="#list-of-delicious-dishes">Special delicious dishes</a></li>
                     </ul>
                 </li>
                 <li><a href="">Restaurant space</a></li>
@@ -37,41 +37,231 @@
             <div class="decor">
                 <img src="assets/restaurant-icon.png" alt="restaurant icon">
             </div>
-            <h1>Toan Thang Hemibagrus Restaurant</h1>
-            <p>Located close to the Red River, Toan Thang Hemibagrus Restaurant is a famous culinary brand in Hanoi and is always a favorite destination for many diners from South to North. Beautiful campus, quiet and poetic space to organize family meals or birthday parties, and especially an ideal location to hold outdoor parties. Dishes made from Hemibagrus fish by a team of experienced chefs will bring…</p>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="" alt="">
-                </div>
-                <div class="gallery-item">
-                    <img src="" alt="">
-                </div>
-                <div class="gallery-item">
-                    <img src="" alt="">
-                </div>
-                <div class="gallery-item">
-                    <img src="" alt="">
-                </div>
+            <h1>Vien Dong Hemibagrus Restaurant</h1>
+            <p>Located close to the Red River, Vien Dong Hemibagrus Restaurant is a famous culinary brand in Hanoi and is always a favorite destination for many diners from South to North. Beautiful campus, quiet and poetic space to organize family meals or birthday parties, and especially an ideal location to hold outdoor parties. Dishes made from Hemibagrus fish by a team of experienced chefs will bring…</p>
+            <div class="wrapper">
+                <div id="left"><i class="fa-solid fa-angle-left"></i></div>
+                <ul class="carousel">
+                    <li class="card">
+                        <div><img src="assets/restaurant-space-1.jpg" alt=""></div>
+                    </li>
+                    <li class="card">
+                        <div><img src="assets/restaurant-space-2.jpg" alt=""></div>
+                    </li>
+                    <li class="card">
+                        <div><img src="assets/restaurant-space-3.jpg" alt=""></div>
+                    </li>
+                    <li class="card">
+                        <div><img src="assets/restaurant-space-4.jpg" alt=""></div>
+                    </li>
+                    <li class="card">
+                        <div><img src="assets/restaurant-space-5.jpg" alt=""></div>
+                    </li>
+                </ul>
+                <div id="right"><i class="fa-solid fa-angle-right"></i></div>
             </div>
         </section>
-        <section id="list-of-delicious-foods" class="row">
-            <h2></h2>
+        <section id="list-of-delicious-dishes" class="row">
+            <h2>List of delicious dishes</h2>
             <p>Collection of delicious dishes of the restaurant</p>
+            <ul class="dishes">
+                <li class="dish">
+                    <div class="dish-img">
+                        <a href="#"><img src="assets/pan-fried-hemibagrus.jpg" alt="Pan-fried Hemibagrus"></a>
+                    </div>
+                    <div class="dish-info">
+                        <div><a href="#">Pan-fried Hemibagrus</a></div>
+                        <p class="price">$12.5</p>
+                    </div>
+                </li>
+                <li class="dish">
+                    <div class="dish-img">
+                        <a href="#"><img src="assets/charcoal-grilled-hemibagrus.jpg" alt="Charcoal grilled Hemibagrus"></a>
+                    </div>
+                    <div class="dish-info">
+                        <div><a href="#">Charcoal grilled Hemibagrus</a></div>
+                        <p class="price">$12.5</p>
+                    </div>
+                </li>
+                <li class="dish">
+                    <div class="dish-img">
+                        <a href="#"><img src="assets/steamed-hemibagrus-with-soy-sauce.jpg" alt="Steamed Hemibagrus with soy sauce"></a>
+                    </div>
+                    <div class="dish-info">
+                        <div><a href="#">Steamed Hemibagrus with soy sauce</a></div>
+                        <p class="price">$12.5</p>
+                    </div>
+                </li>
+                <li class="dish">
+                    <div class="dish-img">
+                        <a href="#"><img src="assets/hemibagrus-hotpot.jpg" alt="Hemibagrus hotpot"></a>
+                    </div>
+                    <div class="dish-info">
+                        <div><a href="#">Hemibagrus hotpot</a></div>
+                        <p class="price">$12.5</p>
+                    </div>
+                </li>
+                <li class="dish">
+                    <div class="dish-img">
+                        <a href="#"><img src="assets/grilled-chopped-fish.jpg" alt="Grilled chopped fish"></a>
+                    </div>
+                    <div class="dish-info">
+                        <div><a href="#">Grilled chopped fish</a></div>
+                        <p class="price"></p>
+                    </div>
+                </li>
+                <li class="dish">
+                    <div class="dish-img">
+                        <a href="#"><img src="assets/steamed-hemibagrus-with-soy-sauce.jpg" alt="Steamed Hemibagrus with soy sauce"></a>
+                    </div>
+                    <div class="dish-info">
+                        <div><a href="#">Steamed Hemibagrus with soy sauce</a></div>
+                        <p class="price">$12.5</p>
+                    </div>
+                </li>
+            </ul>
+            <a class="see-all" href="#">See All</a>
         </section>
-        <section></section>
-        <section></section>
+        <section id="restaurant-space" class="row">
+            <h2>Restaurant space</h2>
+            <p>Collection of images of the restaurant</p>
+            <ul class="posts">
+                <li class="post-1">
+                    <div class="post-img"><img src="assets/restaurant-space-post-1.jpg" alt="Restaurant space post 1"></div>
+                    <h3>Space of the restaurant</h3>
+                    <p class="date">November 9, 2012</p>
+                    <div class="is-divider"></div>
+                    <p class="description">Vien Dong Restaurant opened in July 2010 and has gradually become a favorite culinary address of Hanoians. With a rich menu of Hemibagrus fish, a harmonious combination of traditional Vietnamese cuisine and delicious dishes of modern Asian cuisine, selected and created by an experienced chef into unique dishes with unique flavors.</p>
+                </li>
+                <li class="post-1">
+                    <div class="post-img"><img src="assets/restaurant-space-post-2.jpg" alt=""></div>
+                    <h3>Space of the restaurant</h3>
+                    <p class="date">November 10, 2012</p>
+                    <div class="is-divider"></div>
+                    <p class="description">Vien Dong Restaurant opened in July 2010 and has gradually become a favorite culinary address of Hanoians. With a rich menu of Hemibagrus fish, a harmonious combination of traditional Vietnamese cuisine and delicious dishes of modern Asian cuisine, selected and created by an experienced chef into unique dishes with unique flavors.</p>
+                </li>
+                <li class="post-2">
+                    <div class="post-img"><img src="assets/restaurant-space-post-3.jpg" alt=""></div>
+                    <div class="post-wrapper">
+                        <h3>Space of the restaurant</h3>
+                        <p class="date">November 12, 2012</p>
+                        <div class="is-divider"></div>
+                        <p class="description">Vien Dong Restaurant opened in July 2010 and has gradually become a favorite culinary address of Hanoians. With a rich menu of Hemibagrus fish, a harmonious combination of traditional Vietnamese cuisine and delicious dishes of modern Asian cuisine, selected and created by an experienced chef into unique dishes with unique flavors.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="sign-up-to-receive-notifications">
+            <form action="" class="row">
+                <h2>Sign up to receive notifications</h2>
+                <p>Sign up by email to receive our latest newsletter</p>
+                <label for="email">
+                    <input placeholder="Enter your email address" type="email" name="email" id="email">
+                    <button type="submit">Send</button>
+                </label>
+            </form>
+        </section>
     </main>
     <footer>
         <div class="footer">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
         </div>
         <div class="sub-footer"></div>
     </footer>
     <div class="fixed-section">
 
     </div>
+    <script>
+        /* Prevent scrolling to the top of the page with links with href="#" */
+        const preventHref = document.querySelectorAll('[href = "#"]');
+        preventHref.forEach(e => e.addEventListener('click', i => i.preventDefault()));
+
+
+        /*********************************************************************/
+        const wrapper = document.getElementsByClassName('wrapper')[0];
+        const carousel = document.getElementsByClassName('carousel')[0];
+        const arrowBtns = document.querySelectorAll('.wrapper > div');
+        const cardWidth = document.getElementsByClassName('card')[0].offsetWidth;
+        const carouselChildrens = [...carousel.children];
+
+        let isDragging = false, startX, startScrollLeft, timeoutId;
+
+        // Get the number of cards that can fit in the carousel at once
+        let cardPerView = Math.round(carousel.offsetWidth / cardWidth);
+
+        // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+        carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+            carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+        });
+
+        // Insert copies of the first few cards to end of carousel for infinite scrolling
+        carouselChildrens.slice(0, cardPerView).forEach(card => {
+            carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+        });
+
+        // Add event listeners for the arrow buttons to scroll the carousel left and right
+        arrowBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                carousel.scrollLeft += (btn.id === "left") ? (- cardWidth) : cardWidth;
+            })
+        })
+
+        const dragStart = (e) => {
+            e.preventDefault();
+            isDragging = true;
+            carousel.classList.add("dragging");
+            // Records the initial cursor and scroll position of the carousel
+            startX = e.pageX;
+            startScrollLeft = carousel.scrollLeft;
+        }
+
+        const dragging = (e) => {
+            if (!isDragging) return; // if isDragging is false return from here
+            // Updates the scroll position of the carousel based on the cursor movement
+            carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+        }
+
+        const dragStop = () => {
+            isDragging = false;
+            carousel.classList.remove("dragging");
+        };
+
+        const autoPlay = () => {
+            if (window.innerWidth < 800) return; // Return if window is smaller than 800
+            // Autoplay the carousel after every 2500 ms
+            timeoutId = setTimeout(() => carousel.scrollLeft += cardWidth, 2500);
+        };
+
+        // autoPlay();
+
+        const infiniteScroll = () => {
+            // If the carousel is at the beginning, scroll to the end
+            if (carousel.scrollLeft === 0) {
+                carousel.classList.add("no-transition");
+                carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+                carousel.classList.remove("no-transition");
+            }
+            // If the carousel is at the end, scroll to the beginning
+            else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+                carousel.classList.add("no-transition");
+                carousel.scrollLeft = carousel.offsetWidth;
+                carousel.classList.remove("no-transition");
+            }
+
+            // Clear existing timeout and start autoplay if mouse is not hovering over carousel
+            clearTimeout(timeoutId);
+            if (!wrapper.matches(':hover')) autoPlay();
+        };
+
+        carousel.addEventListener('mousedown', dragStart);
+        carousel.addEventListener('mousemove', dragging);
+        document.addEventListener('mouseup', dragStop);
+        carousel.addEventListener('scroll', infiniteScroll);
+        wrapper.addEventListener('mouseenter', () => clearTimeout(timeoutId));
+        wrapper.addEventListener('mouseleave', autoPlay);
+    </script>
 </body>
 
 </html>
