@@ -11,8 +11,22 @@
 </head>
 
 <body>
+    <div class="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+        <input type="checkbox">
+        <div class="mobile-menu-panel">
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#introduce">Introduce</a></li>
+                <li>
+                    <a href="#list-of-delicious-dishes">Delicious dishes</a>
+                </li>
+                <li><a href="#restaurant-space">Restaurant space</a></li>
+                <li><a href="#sign-up-to-receive-notifications">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+        </div>
+    </div>
     <header>
-        <div class="mobile-menu"></div>
         <div class="header-logo">
             <img src="assets/logo.png" alt="Vien Dong Restaurant Logo">
         </div>
@@ -26,9 +40,9 @@
                         <li><a href="#list-of-delicious-dishes">Special delicious dishes</a></li>
                     </ul>
                 </li>
-                <li><a href="">Restaurant space</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#restaurant-space">Restaurant space</a></li>
+                <li><a href="#sign-up-to-receive-notifications">News</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -152,34 +166,85 @@
             </ul>
         </section>
         <section id="sign-up-to-receive-notifications">
-            <form action="" class="row">
+            <form method="post" action='https://handle-form-data.api' class="row">
                 <h2>Sign up to receive notifications</h2>
                 <p>Sign up by email to receive our latest newsletter</p>
                 <label for="email">
-                    <input placeholder="Enter your email address" type="email" name="email" id="email">
+                    <input placeholder="Enter your email address" type="email" name="email" id="email" required>
                     <button type="submit">Send</button>
                 </label>
             </form>
         </section>
     </main>
     <footer>
-        <div class="footer">
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
+        <div class="footer" id="contact">
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>Vien Dong Hemibagrus Restaurant - Famous culinary brand in Hanoi</p>
+                <address>
+                    <ul>
+                        <li><i class="fa-solid fa-envelope"></i> email@gmail.com</li>
+                        <li><i class="fa-solid fa-phone"></i> (84)(34)301-3758</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Pham Van Bach, P.15, Q.Tan Binh, Tp. HCM</li>
+                    </ul>
+                </address>
+            </div>
+            <div class="gallery">
+                <h3>Gallery</h3>
+                <div class="gallery-items">
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-1.jpg" alt=""></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-2.jpg" alt=""></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-3.jpg" alt=""></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-4.jpg" alt=""></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-5.jpg" alt=""></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-6.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="reviews">
+                <h3>Reviews</h3>
+                <div class="review-container">
+                    <div class="user-review">
+                        <div class="user-name">Keaton Hendrix</div>
+                        <div class="review-text">My family and I often go to this restaurant on weekends. The hemibagrus dish here makes me quite impressed,...</div>
+                    </div>
+                    <div class="user-review">
+                        <div class="user-name">Adriana Crawford</div>
+                        <div class="review-text">The restaurant has many delicious dishes, the restaurant setting is luxurious, the service attitude of the staff is also very professional...</div>
+                    </div>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="sub-footer"></div>
+        <div class="sub-footer">
+            <p>© Copyright belongs to XXX | Designed by XXX</p>
+        </div>
     </footer>
-    <div class="fixed-section">
-
+    <div class="fixed-contact">
+        <ul>
+            <li><i class="fa-solid fa-phone"></i> (84)(34)301-3758</li>
+            <li><i class="fa-solid fa-envelope"></i> Book now</li>
+        </ul>
     </div>
+    <div class="fixed-scroll-top"><i class="fa-solid fa-chevron-up"></i></div>
     <script>
+        /*********************************************************************/
         /* Prevent scrolling to the top of the page with links with href="#" */
+
         const preventHref = document.querySelectorAll('[href = "#"]');
         preventHref.forEach(e => e.addEventListener('click', i => i.preventDefault()));
 
 
         /*********************************************************************/
+        /********************* Script for image carousel *********************/
+
         const wrapper = document.getElementsByClassName('wrapper')[0];
         const carousel = document.getElementsByClassName('carousel')[0];
         const arrowBtns = document.querySelectorAll('.wrapper > div');
@@ -234,8 +299,6 @@
             timeoutId = setTimeout(() => carousel.scrollLeft += cardWidth, 2500);
         };
 
-        // autoPlay();
-
         const infiniteScroll = () => {
             // If the carousel is at the beginning, scroll to the end
             if (carousel.scrollLeft === 0) {
@@ -261,6 +324,26 @@
         carousel.addEventListener('scroll', infiniteScroll);
         wrapper.addEventListener('mouseenter', () => clearTimeout(timeoutId));
         wrapper.addEventListener('mouseleave', autoPlay);
+
+
+        /*********************************************************************/
+        /****************** Script for scroll to top button ******************/
+
+        const dishSection = document.getElementById('list-of-delicious-dishes');
+        const scrollTopBtn = document.getElementsByClassName('fixed-scroll-top')[0];
+        const displayPos = dishSection.getBoundingClientRect().top + window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= displayPos) {
+                scrollTopBtn.style.display = 'flex';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0 });
+        })
     </script>
 </body>
 
