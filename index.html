@@ -7,7 +7,6 @@
     <title>Vien Dong Restaurant</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2e9a74970d.js" crossorigin="anonymous"></script>
-    <!-- https://nhahang2.webmatrix.vn/ -->
 </head>
 
 <body>
@@ -136,6 +135,17 @@
             </ul>
             <a class="see-all" href="#">See All</a>
         </section>
+        <section id="reviews-from-diners">
+            <h2>Reviews from diners</h2>
+            <p>See what other diners have to say about our restaurant</p>
+            <div class="restaurant-video">
+                <video id="video" src="assets/food-video.mp4">Oops! Your browser does not support html video</video>
+                <div id="play-btn-wrapper">
+                    <button id="play-btn"></button>
+                    <p>WATCH VIDEO</p>
+                </div>
+            </div>
+        </section>
         <section id="restaurant-space" class="row">
             <h2>Restaurant space</h2>
             <p>Collection of images of the restaurant</p>
@@ -192,12 +202,12 @@
             <div class="gallery">
                 <h3>Gallery</h3>
                 <div class="gallery-items">
-                    <div class="gallery-item"><img src="assets/restaurant-gallery-1.jpg" alt=""></div>
-                    <div class="gallery-item"><img src="assets/restaurant-gallery-2.jpg" alt=""></div>
-                    <div class="gallery-item"><img src="assets/restaurant-gallery-3.jpg" alt=""></div>
-                    <div class="gallery-item"><img src="assets/restaurant-gallery-4.jpg" alt=""></div>
-                    <div class="gallery-item"><img src="assets/restaurant-gallery-5.jpg" alt=""></div>
-                    <div class="gallery-item"><img src="assets/restaurant-gallery-6.jpg" alt=""></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-1.jpg" alt="restaurant image gallery 1"></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-2.jpg" alt="restaurant image gallery 2"></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-3.jpg" alt="restaurant image gallery 3"></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-4.jpg" alt="restaurant image gallery 4"></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-5.jpg" alt="restaurant image gallery 5"></div>
+                    <div class="gallery-item"><img src="assets/restaurant-gallery-6.jpg" alt="restaurant image gallery 6"></div>
                 </div>
             </div>
             <div class="reviews">
@@ -343,7 +353,20 @@
 
         scrollTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0 });
-        })
+        });
+
+
+        /*********************************************************************/
+        /*********************** Script for play video ***********************/
+
+        const playBtnWrapper = document.getElementById('play-btn-wrapper');
+        const video = document.getElementById('video');
+
+        playBtnWrapper.addEventListener('click', () => {
+            video.play();
+            playBtnWrapper.style.display = 'none';
+            video.setAttribute("controls", "controls");
+        }) 
     </script>
 </body>
 

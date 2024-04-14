@@ -647,13 +647,71 @@ address li svg {
     transition: all .3s;
 }
 
+.restaurant-video {
+    width: calc(100% - 4rem);
+    max-width: 720px;
+    margin: 0 auto 52px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restaurant-video video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#reviews-from-diners > p {
+    color: #f1f1f1;
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto 21px;
+}
+
+#play-btn-wrapper {
+    position: absolute;
+    display: flex;
+    width: 120px;
+    height: 120px;
+    align-items: center;
+}
+
+#play-btn-wrapper p {
+    color: #f1f1f1;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 1px 1px #000;
+}
+
+#play-btn-wrapper button {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border: 2px dashed #f1f1f1;
+    border-radius: 50%;
+}
+
+#play-btn-wrapper button:hover {
+    animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    } 
+}
+
 @media screen and (max-width: 768px) {
     .wrapper .carousel {
         grid-auto-columns: calc((100% / 2) - 5px);
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
     .header-nav {
         display: none;
     }
